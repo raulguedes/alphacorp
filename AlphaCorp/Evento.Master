@@ -1,0 +1,121 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Evento.master.cs" Inherits="AlphaCorp.Evento1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Evento</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="bootstrap/bootstrap.min.css" rel="stylesheet" />
+        <link href="bootstrap-switch/css/bootstrap-switch.css" rel="stylesheet" />
+        <link href="bootstrap/sidenav.css" rel="stylesheet" />
+        <script src="Scripts/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <link href="bootstrap/outros.css" rel="stylesheet" />
+        <script src="js/validator.min.js"></script>
+        <link href="bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+        <script src="bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="bootstrap-switch/js/bootstrap-switch.js"></script>
+        <style type="text/css">
+            .datepicker {
+                z-index: 1050 !important;
+                position: absolute;
+            }
+        </style>
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color: #dadada">
+    <form id="form" runat="server" data-toggle="validator" role="form">
+        <%--        <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                <span class="sr-only">45% Complete</span>
+            </div>
+        </div>--%>
+        <nav class="nav navbar-inverse" style="background-color: #2d3b55;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle " data-toggle="collapse" data-target=".myNavbar">
+                        <span class="icon-bar "></span>
+                        <span class="icon-bar "></span>
+                        <span class="icon-bar "></span>
+                    </button>
+                    <a class="navbar-brand" href="../Home.aspx">
+                        <label id="lblNomeEmpresa" runat="server"></label>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../Home.aspx">Home</a></li>
+                        <li id="LiFuncionario" runat="server"><a href="../Funcionario.aspx">Funcionário</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Atalhos<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header">Cadastros</li>
+                                <li class="dropdown-item"><a href="#" onserverclick="Evento_Click" runat="server">Eventos</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <label id="lblUser" runat="server">Not found</label><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item" runat="server"><a href="../Gerenciamento.aspx">Gerenciamento</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-item" runat="server"><a href="../Conta.aspx">Dados da conta</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-item"><a href="../Login.aspx"><span style="color: rgb(245, 4, 4);">Sair</span></a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <%--                <div class="navbar-form navbar-right" role="search">
+                    <div class="form-group input-group">
+                        <input type="text" class="form-control" placeholder="Search.." />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>--%>
+                </div>
+            </div>
+        </nav>
+        <%-- Menu lateral --%>
+        <div class="container-fluid ">
+            <div class="row content ">
+                <div class=" col-sm-3 sidenav" style="background-color: #dadada;">
+                    <div class="col-sm-12 col-md-12">
+                        <nav class="col-sm-12 navbar navbar-nav" style="background-color: white;">
+                            <div class="container-fluid">
+                                <div class="navbar-header ">
+                                    <div class="text-center">
+                                        <h3><b><span>Evento</span>
+                                        </b></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+
+                            <ul class="collapse navbar-collapse nav nav-pills nav-stacked myNavbar">
+
+                                <li class="active"><a href="../Historia.aspx">História</a></li>
+                            </ul>
+                            <br />
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-sm-9" style="margin-top: 15px;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <footer class="container-fluid text-center">
+            <p>ALPHACORP</p>
+        </footer>
+    </form>
+    <script src="../js/alphacorp.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿.jumbotron, .jumbotron2 {
+    /*box-shadow: 1px 1px 10px #99a5c2;*/
+    background-color: #fff;
+    padding: 10px;
+}
+
+.jumbotron2, thumbnail2 {
+    box-shadow: 1px 1px 10px #99a5c2;
+    padding-left: 15px;
+    padding-top: 30px;
+}
+
+thumbnail2 {
+    padding-top: 0;
+}
+
+.jumbotron .jumbotron {
+    padding-left: 15px;
+    padding-top: 30px;
+}
+
+.well {
+    background-color: #2d3b55;
+}
+
+.pagination {
+    margin: 0;
+}
+
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+
+.shadow {
+    -webkit-box-shadow: 1px -1px 5px 0px #222222;
+    -moz-box-shadow: 1px -1px 5px 0px #222222;
+    box-shadow: 0px 0px 0px 2px #fff;
+    background-color: #9d9d99;
+}
+
+    .shadow:hover {
+        -webkit-box-shadow: 1px -1px 5px 0px #dadada;
+        -moz-box-shadow: 1px -1px 5px 0px #dadada;
+        box-shadow: 0px 0px 0px 2px #337ab7;
+        background-color: white;
+    }
+
+.toggle, .toggle-icon {
+    background-color: #fff;
+    border: 1px solid #222222;
+}
+
+    .toggle:hover {
+        background-color: #222222;
+        border: 1px solid #fff;
+    }
+
+.page-header2 {
+    padding-bottom: 0;
+    padding-top: 0;
+    margin: 0;
+}
+
+.heardGV {
+    background-color: #2d3b55;
+    color: white;
+}
+
+    .heardGV th:hover {
+        background-color: #9d9d99;
+        color: #2d3b55;
+    }
+
+    .heardGV:hover > td,
+    .heardGV > th {
+        background-color: #2d3b55;
+    }   
